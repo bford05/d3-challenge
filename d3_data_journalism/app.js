@@ -76,13 +76,14 @@ var textGroup = chartGroup.append("g")
   .data(healthData)
   .enter()
   .append("text")
-  .attr("dx", d => xLinearScale(d.poverty)-3) //offset text to the left with -
-  .attr("dy", d => yLinearScale(d.healthcare)+2) //offset text down with +
+  .attr("dx", d => xLinearScale(d.poverty)-1) //offset text to the left with -
+  .attr("dy", d => yLinearScale(d.healthcare)+4) //offset text down with +
   .text(d => d.abbr)
   .attr("font-family", "arial")
   .attr("text-anchor", "middle")
   .attr("font-size", "10px")
   .attr("font-weight", "bold")
+  .attr("class", "active")
   .attr("fill", "white");
 
 

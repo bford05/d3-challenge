@@ -67,7 +67,7 @@ var circlesGroup = chartGroup.selectAll("circle")
   .attr("cx", d => xLinearScale(d.poverty))
   .attr("cy", d => yLinearScale(d.healthcare))
   .attr("r", "12")
-  .attr("fill", "green")
+  .attr("class", "stateCircle")
   .attr("opacity", ".7");
 
 //Add state abbreviations to each circle on the chart
@@ -79,12 +79,7 @@ var textGroup = chartGroup.append("g")
   .attr("dx", d => xLinearScale(d.poverty)-1) //offset text to the left with -
   .attr("dy", d => yLinearScale(d.healthcare)+4) //offset text down with +
   .text(d => d.abbr)
-  .attr("font-family", "arial")
-  .attr("text-anchor", "middle")
-  .attr("font-size", "10px")
-  .attr("font-weight", "bold")
-  .attr("class", "active")
-  .attr("fill", "white");
+  .attr("class", "stateText")
 
 
 
